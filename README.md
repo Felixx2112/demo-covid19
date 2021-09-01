@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+## API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[api](https://documenter.getpostman.com/view/10808728/SzS8rjbc)
 
-## Available Scripts
+## UI
 
-In the project directory, you can run:
+[material](https://material-ui.com/getting-started/installation/)
 
-### `yarn start`
+[grid](https://material-ui.com/components/grid/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**`material su dung theo he thong 12 cot nen muon chia thanh 3 cot tren mot hang thi`**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+<Grid container spacing={3}>
 
-### `yarn test`
+<Grid item sm={4} sx={12}>
+ cot thu 1
+</Grid>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<Grid item sm={4} sx={12}>
+ cot thu 2
+</Grid>
 
-### `yarn build`
+<Grid item sm={4} sx={12}>
+ cot thu 3
+</Grid>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+</Grid>
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[highcharts](https://github.com/highcharts/highcharts-react)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[moment](https://github.com/moment/moment)
 
-### `yarn eject`
+**`Giup format Date`**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+import moment from 'moment';
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+moment(date).format('YYYY-MM-DD')
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**`Giup lay ra thoi gian hien tai`**
+`Vi moment hien thi theo ngay 'en' nen minh can phai chuyen sang 'vn'`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+import "moment/locale/vi";
 
-## Learn More
+moment.locale("vi");
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[lodash](https://www.npmjs.com/package/lodash)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`Giup sap xep theo thu tu alpha b`
 
-### Code Splitting
+```bash
+import sortBy from "lodash.sortby";
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+sortBy(collection, iteratees)
 
-### Analyzing the Bundle Size
+.collection: This parameter holds the collection to iterate over.
+.iteratees: This parameter holds the iteratees to sort by and are invoked with one argument(value).
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[react-countup](https://www.npmjs.com/package/react-countup?activeTab=readme)
 
-### Making a Progressive Web App
+`Giup tao hieu ung duration`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+import CountUp from "react-countup";
 
-### Advanced Configuration
+<CountUp end={0} duration={2} separator=" "></CountUp>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This will start a count up transition from 0 to 100 on render.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
